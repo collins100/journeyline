@@ -1,0 +1,24 @@
+<div id='btn' class='button' style='position:absolute; top:438px; left:90px; width:212px; height:62px;' onclick='ERS.navigator.gotoScreen(1);'></div>
+
+<div id='play_btn' class='button' style='position:absolute; top:438px; left:44px; width:304px; height:62px; background:url(media/global/images/splash_play.png); display:none;' onclick='playBtnClicked();'></div>
+
+<script>
+
+	$(document).ready( function() {
+		// if on the iPad, display the Play button first for the splash screen
+		if( ERS.utility.isiPad )
+		{
+			document.getElementById( "btn" ).style.display = "none";
+			document.getElementById( "play_btn" ).style.display = "inherit";
+		}
+	})
+
+	function playBtnClicked()
+	{
+		// show the Enter button
+		document.getElementById( "play_btn" ).style.display = "none";
+		document.getElementById( "btn" ).style.display = "inherit";
+		// play the splash screen audio
+		ERS.moduleData.getCurrentScreenObject().getMediaPlayer().play();
+	}
+</script>

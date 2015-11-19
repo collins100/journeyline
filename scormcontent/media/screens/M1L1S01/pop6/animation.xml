@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- pop3 -->
+<animation>
+
+	<anim>
+		<src>1947a-01.png</src>
+		<time>0</time>
+	</anim>
+	<anim>
+		<src>1947a-02.png</src>
+		<time>0</time>
+		<end>11</end>
+	</anim>
+	<anim>
+		<src>1947a-03.png</src>
+		<time>11</time>
+		<end>24</end>
+	</anim>
+	<anim>
+		<src>1947a-04.png</src>
+		<time>24</time>
+	</anim>
+
+</animation>

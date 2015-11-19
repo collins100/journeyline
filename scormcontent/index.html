@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="apple-mobile-web-app-capable" contJourneylineent="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>Journeyline</title>
+<!-- js/includes -->
+		<script src="js/includes/es5shim.min.js"></script>
+		<script src="js/includes/es5sham.min.js"></script>
+<script type="text/javascript" src="js/includes/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/includes/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/includes/jquery-ui-touch-punch.min.js"></script>
+<!-- js/classes -->
+<script type="text/javascript" src="js/classes/ModuleData.js"></script>
+<script type="text/javascript" src="js/classes/Navigator.js"></script>
+<script type="text/javascript" src="js/classes/DOM.js"></script>
+<script type="text/javascript" src="js/classes/Cookie.js"></script>
+<script type="text/javascript" src="js/classes/Utility.js"></script>
+<!-- /Screen -->
+<script type="text/javascript" src="js/classes/Screen/Screen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/SplashScreen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/PopupScreen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/GlossaryScreen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/ReturnScreen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/Animator.js"></script>
+<script type="text/javascript" src="js/classes/Screen/Button.js"></script>
+<script type="text/javascript" src="js/classes/Screen/FlashScreen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/ResultScreen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/HelpScreen.js"></script>
+<script type="text/javascript" src="js/classes/Screen/JourneylineScreen.js"></script>
+<!-- /MediaPlayer -->
+<script type="text/javascript" src="js/classes/MediaPlayer/MediaPlayer.js"></script>
+<script type="text/javascript" src="js/classes/MediaPlayer/Audio.js"></script>
+<script type="text/javascript" src="js/classes/MediaPlayer/Video.js"></script>
+<!-- /Menus -->
+<script type="text/javascript" src="js/classes/Menus/Menu.js"></script>
+<script type="text/javascript" src="js/classes/Menus/MenuItem.js"></script>
+<script type="text/javascript" src="js/classes/Menus/MainMenu.js"></script>
+<script type="text/javascript" src="js/classes/Menus/ResourcesMenu.js"></script>
+<!-- /Assessments -->
+<script type="text/javascript" src="js/classes/Assessments/Assessment.js"></script>
+<script type="text/javascript" src="js/classes/Assessments/MultipleChoice.js"></script>
+<script type="text/javascript" src="js/classes/Assessments/DragAndDrop.js"></script>
+<!-- js/debug -->
+<script type="text/javascript" src="js/debug/DebugTools.js"></script>
+<!-- js -->
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- scorm inluded -->
+<script type='text/javascript' src='../scormdriver/scormdriver.js'></script>
+<script type='text/javascript' src='../scormdriver/auto-scripts/AutoBookmark.js'></script>
+<script type='text/javascript' src='../scormdriver/auto-scripts/AutoCompleteSCO.js'></script>
+<script type='text/javascript' src='../scormdriver/auto-scripts/CourseExit.js'></script>
+<!-- End Includes -->
+<!-- CSS Includes -->
+<link rel=StyleSheet href="css/style.css">
+<link rel=StyleSheet href="css/menu.css">
+<link rel=StyleSheet href="css/glossary.css">
+<!--[if IE9]>
+<style type="text/css">	
+	#M1L1S01_container
+	{	
+		width:1041px !important;
+		overflow-x:hidden;
+		overflow-y:hidden;
+		-ms-overflow-style: none;
+	}
+</style>
+<![endif]-->
+<!-- End CSS Includes -->
+</head>
+
+<body>
+
+<!-- -->
+<div id="contentBG">
+	<div id="contentBGGraphic">
+
+	
+	<div id="content"></div>
+	
+	
+	<!-- Top Bar -->
+
+<div id="topBar">
+		<!--<div id="mainMenuButton" onclick='ERS.mainMenu.run( true );'></div>-->
+		<div id="mainMenu" class="linear" style="display:none;">
+			<!-- MenuItem's are added dynamically from JavaScript -->
+		</div>
+		<!-- End menu -->
+
+ 		<div id="splash" onclick='ERS.navigator.gotoScreen(0);'></div>
+
+        <div id="helpButton" onclick='ERS.helpPopup.loadScreen();'></div> 
+        <a href="#"  onclick="niExit();"><div id="AZLearnButton"></div></a>
+        
+
+		<!-- Resource menu --> 
+		<!--<div id="resourcesMenuButton" onclick='ERS.resourcesMenu.run( true );'></div>-->
+		<div id="resourcesMenu" style="display: none;">
+			<!-- MenuItem's are added dynamically from JavaScript -->
+		</div>
+
+		<!-- End Resource menu -->
+</div>
+<!-- End Top Bar -->
+	
+	
+	<!-- Video Holder--> 
+	<div id="videoHolder">
+		<video preload="auto" id="videoID"  autoplay src="" ontimeupdate="ERS.moduleData.getCurrentScreenObject().timeUpdate(this);" width="1024" height="650"></video>
+	</div>
+	<!-- End Video Holder -->
+	
+<!-- Bottom Bar -->
+<div id="bottomBar">	
+    <!-- audioBG -->
+	<div id="audioBG">
+		<div id="audioSpan">
+		</div>
+		<div id="audioScrub">
+		</div>
+		<div id="audioScrubTouch" onclick="ERS.moduleData.getCurrentScreenObject().getMediaPlayer().scrubberTouched( event );">
+		</div>
+		<audio id="audioID"  src="" ontimeupdate="ERS.moduleData.getCurrentScreenObject().timeUpdate(this);"><!--type="audio/mpeg" -->
+		</audio>
+	</div>
+	<!-- End audioBG --> 
+	
+
+	<!-- Navigation buttons -->
+	<img id="backButton" src="media/global/images/btn_previous.png" width="55" height="55" onclick='ERS.navigator.previousScreen(); ERS.navigator.restoreImage();' />
+	<div id="playPauseButton" class="pause" onclick="ERS.moduleData.getCurrentScreenObject().getMediaPlayer().togglePlayPause();">
+	</div>
+	<div id="refreshButton" onclick="ERS.moduleData.getCurrentScreenObject().getMediaPlayer().refresh();"></div>
+	<img id="forwardButton" src="media/global/images/btn_next.png" width="55" height="55" onclick='ERS.navigator.nextScreen(); ERS.navigator.changeImage();' />
+	<!-- End Navigation buttons -->
+</div>
+<!-- End Bottom Bar -->
+	
+<!--	<div id="screenCount">Screen <span id="screenNum">X</span> of <span id="totalNum">XX</span></div>   -->
+	
+	</div>
+	<!-- End contentBGGraphic -->
+</div>
+<!-- End contentBG -->
+
+</body>
+<!--<div id="scrollTest"></div>-->
+
+</html>

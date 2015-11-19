@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<manifest identifier="RusticiSoftwareSCORMDriverTemplate" version="1"
+       xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+       xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                           http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                           http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>1.2</schemaversion>
+		<adlcp:location>metadata.xml</adlcp:location> 
+	</metadata>
+	<organizations default="B0">
+		<organization identifier="B0">
+			
+			<!--****** Title ******-->
+			<title>Saxa/Dapa Diabetes Journeyline</title> 
+			
+			<item identifier="i1" identifierref="r1" isvisible="true">
+				
+				<!--****** Title ******-->
+
+				<title>Saxa/Dapa Diabetes Journeyline</title> 
+			</item>	
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="r1" type="webcontent" adlcp:scormtype="sco" href="scormcontent/launch.html">
+			 <file href="scormcontent/launch.html" />
+<!--		<resource identifier="r1" type="webcontent" adlcp:scormtype="sco" href="scormdriver/indexAPI.html">
+			 <file href="scormdriver/indexAPI.html" />-->
+				<file href="LICENSE.txt" />
+	            <file href="readme.txt" /> 
+	 			<file href="scormcontent/index.html" /> 
+	 			<file href="scormdriver/AICCComm.html" /> 
+	 			<file href="scormdriver/auto-scripts/AutoBookmark.js" /> 
+	 			<file href="scormdriver/auto-scripts/AutoCompleteSCO.js" /> 
+	 			<file href="scormdriver/auto-scripts/CourseExit.js" /> 
+	 			<file href="scormdriver/blank.html" /> 
+	 			<file href="scormdriver/goodbye.html" /> 
+	 			<file href="scormdriver/scormdriver.js" />
+				<file href="scormdriver/browsersniff.js" />
+				
+				<file href="scormcontent\index.html" /> 
+				<file href="scormcontent\css\glossary.css" /> 
+				<file href="scormcontent\css\menu.css" /> 
+				<file href="scormcontent\css\style.css" /> 
+				<file href="scormcontent\docs\about.html" /> 
+				<file href="scormcontent\js\config.js" /> 
+				<file href="scormcontent\js\main.js" /> 
+				<file href="scormcontent\js\classes\Cookie.js" /> 
+				<file href="scormcontent\js\classes\DOM.js" /> 
+				<file href="scormcontent\js\classes\ModuleData.js" /> 
+				<file href="scormcontent\js\classes\Navigator.js" /> 
+				<file href="scormcontent\js\classes\Utility.js" /> 
+				<file href="scormcontent\js\classes\Assessments\Assessment.js" /> 
+				<file href="scormcontent\js\classes\Assessments\DragAndDrop.js" /> 
+				<file href="scormcontent\js\classes\Assessments\MultipleChoice.js" /> 
+				<file href="scormcontent\js\classes\MediaPlayer\Audio.js" /> 
+				<file href="scormcontent\js\classes\MediaPlayer\MediaPlayer.js" /> 
+				<file href="scormcontent\js\classes\MediaPlayer\Video.js" /> 
+				<file href="scormcontent\js\classes\Menus\MainMenu.js" /> 
+				<file href="scormcontent\js\classes\Menus\Menu.js" /> 
+				<file href="scormcontent\js\classes\Menus\MenuItem.js" /> 
+				<file href="scormcontent\js\classes\Menus\ResourcesMenu.js" /> 
+				<file href="scormcontent\js\classes\Screen\Animator.js" /> 
+				<file href="scormcontent\js\classes\Screen\Button.js" /> 
+				<file href="scormcontent\js\classes\Screen\FlashScreen.js" /> 
+				<file href="scormcontent\js\classes\Screen\GlossaryScreen.js" /> 
+				<file href="scormcontent\js\classes\Screen\HelpScreen.js" /> 
+				<file href="scormcontent\js\classes\Screen\JourneylineScreen.js" /> 
+				<file href="scormcontent\js\classes\Screen\PopupScreen.js" /> 
+				<file href="scormcontent\js\classes\Screen\ResultScreen.js" /> 
+				<file href="scormcontent\js\classes\Screen\ReturnScreen.js" /> 
+				<file href="scormcontent\js\classes\Screen\Screen.js" /> 
+				<file href="scormcontent\js\classes\Screen\SplashScreen.js" /> 
+				<file href="scormcontent\js\debug\DebugTools.js" /> 
+				<file href="scormcontent\js\includes\jquery-1.8.1.min.js" /> 
+				<file href="scormcontent\js\includes\jquery-ui-touch-punch.min.js" /> 
+				<file href="scormcontent\js\includes\jquery-ui.min.js" /> 
+				<file href="scormcontent\media\audio\AZ-Track_1.mp3" /> 
+				<file href="scormcontent\media\audio\AZ-Track_2.mp3" /> 
+				<file href="scormcontent\media\audio\SPBT.m4v" /> 
+				<file href="scormcontent\media\global\fonts\NeutraTextTF-Book.otf" /> 
+				<file href="scormcontent\media\global\fonts\Nilland-Black.ttf" /> 
+				<file href="scormcontent\media\global\fonts\Nilland-Bold.ttf" /> 
+				<file href="scormcontent\media\global\fonts\Nilland-ExtraBold.ttf" /> 
+				<file href="scormcontent\media\global\fonts\Nilland-SmallCaps-Bold.ttf" /> 
+				<file href="scormcontent\media\global\fonts\Nilland-SmallCaps.ttf" /> 
+				<file href="scormcontent\media\global\fonts\Nilland.ttf" /> 
+				<file href="scormcontent\media\global\images\Background.png" /> 
+				<file href="scormcontent\media\global\images\blank_image.gif" /> 
+				<file href="scormcontent\media\global\images\bottomBar.png" /> 
+				<file href="scormcontent\media\global\images\btn_AZ.png" /> 
+				<file href="scormcontent\media\global\images\btn_glossary.png" /> 
+				<file href="scormcontent\media\global\images\btn_help.png" /> 
+				<file href="scormcontent\media\global\images\btn_menu.png" /> 
+				<file href="scormcontent\media\global\images\btn_next.png" /> 
+				<file href="scormcontent\media\global\images\btn_pause.png" /> 
+				<file href="scormcontent\media\global\images\btn_pause_off.png" /> 
+				<file href="scormcontent\media\global\images\btn_play.png" /> 
+				<file href="scormcontent\media\global\images\btn_play_off.png" /> 
+				<file href="scormcontent\media\global\images\btn_previous.png" /> 
+				<file href="scormcontent\media\global\images\btn_refresh.png" /> 
+				<file href="scormcontent\media\global\images\btn_refresh_off.png" /> 
+				<file href="scormcontent\media\global\images\btn_resources.png" /> 
+				<file href="scormcontent\media\global\images\btn_slider.png" /> 
+				<file href="scormcontent\media\global\images\Buttons2.png" /> 
+				<file href="scormcontent\media\global\images\scrubber.png" /> 
+				<file href="scormcontent\media\global\images\scrubberBG.png" /> 
+				<file href="scormcontent\media\global\images\SubmitBtn.png" /> 
+				<file href="scormcontent\media\global\images\topBar.png" /> 
+				<file href="scormcontent\media\global\images\track.png" /> 
+				<file href="scormcontent\media\global\popups\flashCard\flashCardMaster.html" /> 
+				<file href="scormcontent\media\global\popups\glossary\glossary.html" /> 
+				<file href="scormcontent\media\global\popups\help\help.html" /> 
+				<file href="scormcontent\media\global\popups\help\help.png" /> 
+				<file href="scormcontent\media\global\popups\help\help2.png" /> 
+				<file href="scormcontent\media\global\popups\result\correct.png" /> 
+				<file href="scormcontent\media\global\popups\result\incorrect1.png" /> 
+				<file href="scormcontent\media\global\popups\result\incorrect2.png" /> 
+				<file href="scormcontent\media\global\popups\result\result.html" /> 
+				<file href="scormcontent\media\global\popups\return\return.html" /> 
+				<file href="scormcontent\media\global\popups\return\return.png" /> 
+				<file href="scormcontent\media\screens\M1L0S01\M1L0S01.html" /> 
+				<file href="scormcontent\media\screens\M1L0S01\M1L0S01.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\journeyline_Background.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\M1L1S01.html" /> 
+				<file href="scormcontent\media\screens\M1L1S01\M1L1S01.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\M1L1S01_orig.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\button.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\pop1.html" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\pop1.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\stage_1.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\stage_2.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\stage_3.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\stage_4.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop1\stage_5.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop2\pop2.html" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop2\pop2.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\animation.xml" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\bullet1.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\bullet2.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\bullet3.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\bullet4.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\pop3.html" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\pop3.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\subtitle.png" /> 
+				<file href="scormcontent\media\screens\M1L1S01\pop3\title.png" /> 
+				<file href="scormcontent\media\xml\answers.xml" /> 
+				<file href="scormcontent\media\xml\glossary.xml" /> 
+				<file href="scormcontent\media\xml\menu.xml" /> 
+				<file href="scormcontent\media\xml\screens.xml" /> 
+				<file href="scormdriver\AICCComm.html" /> 
+				<file href="scormdriver\blank.html" /> 
+				<file href="scormdriver\browsersniff.js" /> 
+				<file href="scormdriver\goodbye.html" /> 
+<!--				<file href="scormdriver\indexAPI.html" /> -->
+				<file href="scormdriver\scormdriver.js" /> 
+				<file href="scormdriver\auto-scripts\AutoBookmark.js" /> 
+				<file href="scormdriver\auto-scripts\AutoCompleteSCO.js" /> 
+				<file href="scormdriver\auto-scripts\CourseExit.js" /> 
+
+								
+		</resource>
+	</resources>
+</manifest>

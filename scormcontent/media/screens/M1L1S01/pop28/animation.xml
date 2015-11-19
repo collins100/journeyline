@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation>
+	<anim>
+		<src>2006-01.png</src>
+		<time>0</time>
+	</anim>
+	<anim>
+		<src>2006-02.png</src>
+		<time>0</time>
+	</anim>
+	<anim>
+		<src>2006-03.png</src>
+		<time>10</time>
+	</anim>
+	<anim>
+		<src>2006-04.png</src>
+		<time>15</time>
+	</anim>
+	<anim>
+		<src>2006-05.png</src>
+		<time>23</time>
+	</anim>
+	<anim>
+		<src>2006-06.png</src>
+		<time>35</time>
+	</anim>
+	<anim>
+		<src>2006-07.png</src>
+		<time>38</time>
+	</anim>
+	<anim>
+		<src>2006-08.png</src>
+		<time>43</time>
+	</anim>
+</animation>

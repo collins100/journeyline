@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation>
+
+	<anim>
+		<src>2005a-01.png</src>
+		<time>0</time>
+	</anim>
+	<anim>
+		<src>2005a-02.png</src>
+		<time>0</time>
+	</anim>
+
+</animation>

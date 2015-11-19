@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation>
+	<anim>
+		<src>1979-01.png</src>
+		<time>0</time>
+	</anim>
+	<anim>
+		<src>1979-02.png</src>
+		<time>1</time>
+	</anim>
+	<anim>
+		<src>1979-03.png</src>
+		<time>6</time>
+	</anim>
+	<anim>
+		<src>1979-04.png</src>
+		<time>9</time>
+	</anim>
+	<anim>
+		<src>1979-05.png</src>
+		<time>13</time>
+	</anim>
+	<anim>
+		<src>1979-06.png</src>
+		<time>17</time>
+	</anim>
+</animation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation>
+	<anim>
+		<src>1993-01.png</src>
+		<time>0</time>
+  </anim>
+	<anim>
+		<src>1993-02.png</src>
+		<time>0</time>
+  </anim>
+</animation>

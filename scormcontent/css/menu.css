@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+/* new menu  */
+
+
+#mainMenuButton {
+	background-image: url(../media/global/images/btn_menu.png);
+    background-size: 61px 61px;
+	width: 180px;
+	height: 60px;
+	top:3px;
+	left:20px;
+
+}
+#mainMenu {
+	background-image: url(../media/global/images/menu_BG.png);
+    background-size: 350px 507px;
+	display:none;
+	position:absolute;
+	width:350px;
+	height:507px;
+	top:50px;
+	left:8px;
+	-webkit-animation-duration: 3s;
+	z-index: 9;
+}
+#mainMenu .menuClose { 
+	display:block;
+    margin-left:50%;
+	width: 355px;
+	height: 33px;
+	background-repeat:no-repeat;
+}
+
+.menuItem {
+	background-size: 315px 67px;
+	width: 315px;
+	height: 67px;
+	margin-left: 32px;
+}
+.menuItem:first-child {
+	margin-top: 15px;
+}
+#number {
+	position:absolute;
+	width: 113px;
+	height: 30px;
+	top: 16px;
+	left: 79px;
+}
+
+
+#glossaryButton {  
+	background:url(../media/global/images/btn_glossary.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 61px 61px;
+	width: 61px;
+	height: 61px;
+	top:2px;
+	left: 778px;
+}
+#resourcesMenuButton { 
+	background:url(../media/global/images/btn_resources.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 61px 61px;
+	width: 61px;
+	height: 61px;
+	top:0px;
+	left: 849px;
+/*	z-index: 2;*/
+}
+#resourcesMenu {
+	position: absolute;
+	background-image: url(../media/global/images/resource_BG.png);
+    background-size: 323px 238px;
+	width: 323px;
+	height: 238px;
+	top: 50px;
+	right: 19px;
+	z-index: 9;
+}
+#iDashButton {  
+	background:url(../media/global/images/btn_iDash.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 80px 61px;
+	width: 80px;
+	height: 61px;
+	top:3px;
+	left: 920px;
+	z-index: 2;
+}
+
+.resourceItem {
+	background-size: 323px 67px;
+	width: 323px;
+	height: 67px;
+}
+.resourceItem:first-child {
+	margin-top: 16px;
+}
+
+
+
+
+
+

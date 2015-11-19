@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screenList>
+	
+	<screen>
+		<name>M1L0S01</name>
+		<title>Journeyline Test</title>
+		<type>splash</type>
+		<mediaName>S01_alt2.mp3</mediaName>
+	</screen>
+	
+	<!-- Journeyline Test -->	
+	<screen>
+		<name>M1L1S01</name>
+		<title>Journeyline Test</title>
+		<type>journeyline</type>
+		<mediaName></mediaName>
+		
+
+		<popup>
+			<name>pop1</name>
+			<mediaName>1559_intro.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+		
+		<popup>
+			<name>pop2</name>
+			<mediaName>1921.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+		
+		<popup>
+			<name>pop3</name>
+			<mediaName>1922.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+		
+		<popup>
+			<name>pop4</name>
+			<mediaName>S05.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+		
+		<popup>
+			<name>pop5</name>
+			<mediaName>S06.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop6</name>
+			<mediaName>S07.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop7</name>
+			<mediaName>S08.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop8</name>
+			<mediaName>S09.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+			<!--<popup>
+					<name>pop41</name>
+					<mediaName></mediaName>
+			</popup>-->
+		</popup>
+
+		<popup>
+			<name>pop9</name>
+			<mediaName>S10.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop10</name>
+			<mediaName>S11.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop11</name>
+			<mediaName>S12.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop12</name>
+			<mediaName>1964.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop13</name>
+			<mediaName>1971.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop14</name>
+			<mediaName>S15.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop15</name>
+			<mediaName>S16.mp3</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+
+			<assessment>
+				<type>dragAndDrop</type>
+				<options>
+					<meter>true</meter>
+					<meterGrid>90</meterGrid>
+				</options>
+			</assessment>
+		</popup>
+
+		<popup>
+			<name>pop16</name>
+			<mediaName>S17.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop17</name>
+			<mediaName>1982.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop18</name>
+			<mediaName>1992.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop19</name>
+			<mediaName>S20.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop20</name>
+			<mediaName>S21_rev.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop21</name>
+			<mediaName>S22_V1.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop22</name>
+			<mediaName>S23.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop23</name>
+			<mediaName>1998.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop24</name>
+			<mediaName>S25_V1.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop25</name>
+			<mediaName>S26.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop26</name>
+			<mediaName>S27.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop27</name>
+			<mediaName>S28.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop28</name>
+			<mediaName>S29.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop29</name>
+			<mediaName>S30.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop30</name>
+			<mediaName>S31.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop31</name>
+			<mediaName>S32.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop32</name>
+			<mediaName>S33.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop33</name>
+			<mediaName>S34.mp3</mediaName>
+			<animation>true</animation>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+		<popup>
+			<name>pop34</name>
+			<mediaName>2013.mp4</mediaName>
+			<options>
+				<event>true</event>
+			</options>
+		</popup>
+
+	<popup>
+		<name>pop35</name>
+		<mediaName>S36.mp3</mediaName>
+		<animation>true</animation>
+		<options>
+			<event>true</event>
+		</options>
+	</popup>
+
+	<popup>
+		<name>pop36</name>
+		<mediaName>2014b.mp4</mediaName>
+		<options>
+			<event>true</event>
+		</options>
+	</popup>
+
+	<popup>
+		<name>pop37</name>
+		<mediaName>S38.mp3</mediaName>
+		<animation>true</animation>
+		<options>
+			<event>true</event>
+		</options>
+	</popup>
+
+	<popup>
+		<name>pop38</name>
+		<mediaName>S39.mp3</mediaName>
+		<animation>true</animation>
+		<options>
+			<event>true</event>
+		</options>
+	</popup>
+
+	<popup>
+		<name>pop39</name>
+		<mediaName>S40.mp3</mediaName>
+		<animation>true</animation>
+		<options>
+			<event>true</event>
+		</options>
+	</popup>
+
+<!--	<popup>
+		<name>pop40</name>
+		<mediaName>S41.mp3</mediaName>
+		<animation>true</animation>
+		<options>
+			<event>true</event>
+		</options>
+	</popup>-->
+	
+	<popup>
+		<name>pop41</name>
+		<mediaName></mediaName>
+		<animation></animation>
+		<options>
+			<event>true</event>
+		</options>
+	</popup>
+
+
+	
+	</screen>	
+
+</screenList>
+

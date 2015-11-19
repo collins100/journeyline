@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Niland-Bold';
+    src: url('../media/global/fonts/Nilland-ExtraBold.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+html {
+	height:100%;
+	padding: 0;
+	max-width: 1024px;
+	max-height: 672px;
+	width: 1024px;
+	height: 672px;
+  margin: 0 auto;
+  position:relative;
+ background-color: white;
+}
+body{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	margin: 0 auto;	
+	height:100%;
+	max-width: 1024px;
+	max-height: 672px;
+	padding: 0;
+	position:relative;
+	scroll: no;
+}
+#scrollTest{
+	position:relative;
+}
+
+a { border: 0; outline: 0;}
+a:hover { border: 0; }
+a:selected { border: 0; }
+a:focus{ outline:0; }
+#contentBG { 
+	position: relative;
+	margin: 0 auto;
+}
+#contentBGGraphic {
+	display: block;
+	background:url(../media/global/images/Background.png);
+	background-repeat: no-repeat;
+	position:relative;
+	margin: 0 auto;
+    background-size: 1024px 672px;
+	width: 1024px;
+	height: 672px;
+}
+#content{ 
+	position: absolute; 
+	top: 75px; 
+	left: 0; 
+	height: 553px; 
+	width: 1024px; 
+	overflow:hidden; 
+	margin-bottom: -40px; 
+}
+
+img { border: none; }
+
+.button {   
+	cursor: pointer;
+	background-image: url(../media/global/images/blank_image.gif);
+}
+
+#splash { 
+        position:absolute;
+        width: 60px;
+        height: 60px;
+        top: 2px;
+        left: 8px;
+}
+
+#helpButton {  
+	background:url(../media/global/images/btn_help.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 40px 40px;
+	width: 40px;
+	height: 40px;
+	top:13px;
+	left: 907px;
+}
+#AZLearnButton {  
+	background:url(../media/global/images/btn_AZ.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 40px 40px;
+	width: 40px;
+	height: 40px;
+	top:13px;
+	left: 955px;
+	z-index: 2;
+}
+
+/************  Audio Scrubber *************/
+#audioBG{
+	position:absolute;
+	background-size: 368px 10px;
+	width:302px;
+	height:10px;
+	left:122px;
+	bottom: 42px;
+	background:url(../media/global/images/scrubberBG.png);
+	z-index: 4; 
+}
+#audioScrub{
+	position:absolute;
+	height:8px;
+	top:2px;
+	left:3px;
+	background:url(../media/global/images/scrubber.png);
+}
+#audioScrubTouch{
+	position:relative;
+	width:300px;
+	height:40px;
+	bottom: 10px;
+	z-index:1;
+}
+#disclaimer { 
+	font-family: 'Myriad';
+	font-size: 10px;
+	line-height: 12px;
+	color: #7b7c7f;
+	position: absolute;
+	bottom: 18px;
+	left:145px;
+}
+#popupReturn{
+	display:inherit;
+	background:url(../media/global/images/Restart.png);
+	width:1024px;
+	height:768px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index: 998;
+}
+#topBar {
+	background-repeat: no-repeat;
+	background-size: 1024px 61px;
+	width: 1024px;
+	height: 60px;
+}
+#bottomBar {	
+	position: absolute; 
+	bottom: 0px; 
+	background-size: 1024px 61px;
+	width: 1024px;
+	height: 60px;
+}
+#mainMenuButton{ 
+	background: url(../media/global/images/menu.png); 
+	background-repeat: no-repeat;
+	background-size: 61px 61px;
+	width: 61px; height: 61px; 
+	position: absolute; 
+	top: 0px; 
+	left: 20px;  
+}
+
+#backButton { /* Rewind */
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:791px;
+	z-index: 4; 
+}
+#playPauseButton.pause {
+	background:url(../media/global/images/btn_pause.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:836px;
+	z-index: 4; 
+}
+#playPauseButton.pause.off{
+	background:url(../media/global/images/btn_pause_off.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:836px;
+	z-index: 4; 
+}
+#playPauseButton.play {
+	background:url(../media/global/images/btn_play.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:836px;
+	z-index: 4;
+}
+#playPauseButton.play.off {
+	background:url(../media/global/images/btn_play_off.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:836px;
+	z-index: 4; 
+}
+#refreshButton { 
+	background:url(../media/global/images/btn_refresh.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:881px;
+	z-index: 4;
+}
+#refreshButton.off {  
+	background:url(../media/global/images/btn_refresh_off.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:881px;
+	z-index: 4; 
+}
+#forwardButton {  /* Forward */
+	position:absolute;
+	background-size: 37px 37px;
+	width: 37px;
+	height: 37px;
+	bottom:42px;
+	left:926px;
+	z-index: 4; 
+}
+
+#popupVideo {
+	margin: 1px; 
+	border: solid;
+	border-width: 2px;
+	border-color: #f2f2f2; 
+}
+
+
+
+/******FLIP CARD CSS STYLE RULES *********/
+
+#help {
+	width: 1024px;
+	height: 672px;
+}
+/*** assessments and progress checks ****/
+#result_img { 
+	background-size: 1024px 651px;
+	width: 1024px;
+	height: 651px;
+}
+
+#resultsCover {	
+	background-color:  rgba(123, 124, 127, 0.8);
+	width: 1024px;
+	height:768px;
+}
+#popWindow img {
+	position: absolute;
+	top: 78px;
+	left: 0px;	
+	width: 1024px;
+	height:651px;
+}
+

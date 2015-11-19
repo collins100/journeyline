@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Controls all menu data for the module
+	
+	src: the image to use for the given menu item
+	action: the action to be taken when the user clicks the given menu item
+		action commands:
+			- "glossary": opens the module's glossary
+			- "gotoScreen:<INTEGER>": when this item is clicked, the module's Navigator will open an explicit 'screen' given by the <INTEGER> parameter
+			- "gotoLesson:<INTEGER>": when this item is clicked, the module's Navigator will open the 'lesson' given by the <INTEGER> parameter (use this when possible)
+			- "close": defines this item as the given menu's close button
+			- "openURL:<URL>": when clicked, this menu item will open the given <URL> in a new window
+	
+	excludeScreen: used to describe screen numbers for screens in which the given menu should be unavailable
+		- tags of this type are placed at the same level as the "item" tags (direct children of a menu)
+-->
+
+<menus>
+
+	<!-- Main Menu Data -->
+	<mainMenu>
+		<item>
+			<src>menu_home.png</src>
+			<action>gotoScreen:0</action>
+		</item>
+		
+		<item>
+			<src>menu_lesson1_on.png</src>
+			<action>gotoLesson:1</action>
+		</item>
+		
+		<item>
+			<src>menu_lesson2_on.png</src>
+			<action>gotoLesson:2</action>
+		</item>
+		
+		<item>
+			<src>menu_lesson3_on.png</src>
+			<action>gotoLesson:3</action>
+		</item>
+		
+		<item>
+			<src>menu_lesson4_on.png</src>
+			<action>gotoLesson:4</action>
+		</item>
+		
+		<item>
+			<src>menu_lesson5_on.png</src>
+			<action>gotoLesson:5</action>
+		</item>
+		
+		<item>
+			<src>menu_lesson6_on.png</src>
+			<action>gotoLesson:6</action>
+		</item>
+		
+		<excludeScreen>0</excludeScreen>
+	</mainMenu>
+
+	
+	<!-- Resources Menu Data -->
+	<resourcesMenu>
+		<item>
+			<src>resource_1.png</src>
+			<action>openURL:../EpiDuo_One/media/global/images/Pathology-and-Treatment-of-Acne_Print.pdf</action>
+		</item>
+		
+		<item>
+			<src>resource_2.png</src>
+			<action>openURL:../EpiDuo_One/media/global/images/Acne_KeyTakeaways.pdf</action>
+		</item>
+	</resourcesMenu>
+	
+</menus>

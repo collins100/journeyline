@@ -1,0 +1,709 @@
+<!-- 
+	IF YOU'RE READING THIS: open this file in a web browser for a better experience!
+	
+	Author: Alex Miele
+	Date: February, 2015
+	Email: amiele12@gmail.com
+	
+	Documentation for the online module framework.
+-->
+
+<html>
+<head>
+<title>ERS Online Module Framework</title>
+
+<style>
+.center
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+table, th, td 
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td 
+{
+    padding: 15px;
+	font-weight: bold;
+}
+th
+{
+	background: white;
+}
+tr:nth-child(even) 
+{
+	background: #CCC;
+}
+tr:nth-child(odd)
+{
+	background: #E8E8E8;
+}
+a:visited 
+{ 
+    background-color: inherit;
+}
+#content
+{
+	font-size:125%;
+}
+dt, dd
+{
+	margin-top: 10px;
+}
+.topic
+{
+	margin-top: 80px;
+}
+p
+{
+    text-indent: 25px;
+}
+dt
+{
+	font-weight: bold;
+}
+code 
+{ 
+    font-family: monospace;
+}
+</style>
+
+</head>
+
+<body class="center">
+
+<a name="top"></a>
+
+<!-- Page header -->
+<h1>ERS Online Module Framework: Documentation</h1>
+<h3>
+Author: Alex Miele
+<br>
+Date: February, 2015 (last update: 6/26/2015)
+<br>
+Email: amiele12 (at) gmail.com
+</h3>
+
+
+<!-- Table of Contents -->
+<div style="margin-top:50px;">
+	<table style="width:100%">
+		<tr>
+			<th colspan="2">Table of Contents</th>
+		</tr>
+		<tr>
+			<td><a href="#intro">Introduction</a></td>
+		</tr>
+		<tr>
+			<td><a href="#directories">Directories Explained</a></td>
+		</tr>
+		<tr>
+			<th colspan="2">Technical</th>
+		</tr>
+		<tr>
+			<td><a href="#designOverview">The Design: Overview</a></td>
+		</tr>
+		<tr>
+			<td><a href="#codeOverview">The Code: Overview</a></td>
+		</tr>
+		<tr>
+			<td><a href="#classes">The Code: Classes</a></td>
+		</tr>
+		<tr>
+			<th colspan="2">How To</th>
+		</tr>
+		<tr>
+			<td><a href="#howToScreens">How To: Screens</a></td>
+		</tr>
+		<tr>
+			<td><a href="#howToButtons">How To: Buttons</a></td>
+		</tr>
+		<tr>
+			<td><a href="#howToPopups">How To: Popups</a></td>
+		</tr>
+		<tr>
+			<td><a href="#howToAnimations">How To: Animations</a></td>
+		</tr>
+		<tr>
+			<td><a href="#howToAssessments">How To: Assessments</a></td>
+		</tr>
+		<tr>
+			<td><p><a href="#howToAssessmentsResult">- Custom Result Screens</a></p></td>
+		</tr>
+		<tr>
+			<td><p><a href="#howToAssessmentsMultiple">- Multiple Choice</a></p></td>
+		</tr>
+		<tr>
+			<td><p><a href="#howToAssessmentsDragAndDrop">- Drag and Drop</a></p></td>
+		</tr>
+	</table>
+</div>
+
+
+<!-- Content -->
+<div id="content" style="margin-top:100px;">
+	
+	<!-- Introduction -->
+	<div class="topic">
+		<a name="intro"></a>
+		<h3> Introduction </h3>
+		<p>
+			The ERS Online Module Framework is a package of code files, HTML/CSS, XML as well as examples and documentation like this one to help improve 
+			the process of creating web modules. This framework does its best to mitigate unnecessary work by allowing the mundane and standard elements
+			of ERS' web modules to be created with the fewest number of modifications as possible. Changes to the code (JavaScript) are time consuming and
+			because of this, the framework attempts to keep the majority of modifications bound to the HTML/CSS and XML files in order to expedite the creation of 
+			online modules.  
+		</p>
+		<p>
+			This documentation will explain the framework (including the code, design, CSS/HTML, and data files) used to create web modules, 
+			as well as a "how-to" guide for creating the various elements of a web module.
+		</p>
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- Directories Explained -->
+	<div class="topic">
+		<a name="directories"></a>
+		<h3> Directories Explained </h3>
+		<p>
+			<dl>
+			<dt>css/</dt>
+				<dd>- all external css files</dd>
+			<dt>docs/</dt>
+				<dd>- documentation for the framework</dd>
+			<dt>js/</dt>
+				<dd>- all JavaScript (client-side) code for the framework</dd>
+			<dt>js/classes</dt>
+				<dd>- all JavaScript class files</dd>
+			<dt>js/debug</dt>
+				<dd>- any classes/code that are used in the debugging/content creation process</dd>
+			<dt>js/includes</dt>
+				<dd>- JavaScript include files that don't need to be edited (jQuery, touch-punch, etc.)</dd>
+			<dt>media/</dt>
+				<dd>- content for the module including images, HTML files, XML files, audio/video, etc.</dd>
+			<dt>media/audio</dt>
+				<dd>- audio AND video files (inherited/poorly named)</dd>
+			<dt>media/global</dt>
+				<dd>- any global content for the module (images, etc.)</dd>
+			<dt>media/global/images</dt>
+				<dd>- images used on multiple screens</dd>
+			<dt>media/global/popups</dt>
+				<dd>- content for popups available through the duration of the module (glossary, etc.)</dd>
+			<dt>media/screens</dt>
+				<dd>- specific content for each screen in the module (HTML, images, animation XML, popup content folders, etc.)</dd>
+			<dt>media/xml</dt>
+				<dd>- static XML data files used in the module</dd>
+			<dt>php/</dt>
+				<dd>- all PHP (server-side) code for the framework</dd>
+			</dl>
+		</p>
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- The Design: Overview -->
+	<div class="topic">
+		<a name="designOverview"></a>
+		<h3>The Design: Overview</h3>
+		<p>
+			The code in the framework uses a common design pattern called "MVC", or Model, View, Controller. In short, this design pattern focuses on the separation
+			of the Model (data such as XML files), the View (HTML/CSS), and the Controller (code such as JavaScript and PHP). Wherever possible, I have done my best
+			to make sure the Controller doesn't unnecessarily leak into the View and vice-versa, unless done for readability purposes (such as static onclick elements in the HTML)
+			or simplification/efficiency purposes (such as static HTML/CSS in the config.js file to be dynamically inserted into the DOM).
+		</p>
+		<p>
+			The Model (XML) and the View (HTML/CSS) portions of the framework will be the most often touched when creating a web module.
+			For example, if a new module, successor to a completed module, has the same <i>functionality</i> (synonymous with the Controller/code in our design) as the
+			previously completed module, then the "js/" directory, or JavaScript code, should go untouched in this scenario. The only files that will need to be edited 
+			should be the XML/HTML/CSS files in the framework, as only the Model and View for this hypothetical successor module have changed. If instead, in this example scenario, 
+			the new module has some new functionality (such as a new type of animation or navigation function), then the Controller would need to be altered.
+		</p>
+		<p>
+			In short, the goal of the MVC design is to mitigate unnecessary maintenance and alteration of the code, and have as much of the alterations to the framework 
+			require only the simplified XML/HTML/CSS files.
+		</p>
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- The Code: Overview -->
+	<div class="topic">
+		<a name="codeOverview"></a>
+		<h3>The Code: Overview</h3>
+		<p>
+			For a description of any class/file, sometimes the best thing to do is open the file itself as I've been careful to comment each individually more thoroughly then 
+			I generally care to recreate in this documentation file. However, I will briefly go over some of the more important classes/files in the framework in plain English
+			to speed up the learning process.
+		</p>
+		<p>
+			All code in the module begins in "main.js". In there, several "global" (or technically speaking, singleton) objects are created including the ModuleData object,
+			persistent menu objects, navigation object, etc. all of which live under the ERS namespace. The $( document ).ready function initializes the code (grabs any 
+			necessary XML and init's various objects) for the module. From here, the module is almost entirely user driven through various interactions (mostly mouse-clicks), 
+			with some sections being driven by timed events (such as audio/video playback).
+		</p>
+		<p>
+			The global ModuleData object (accessed in JavaScript with ERS.moduleData), holds any persistent data for the module. This includes XML data for the screens (explained
+			below), the current screen object, the current screen number, etc.
+		</p>
+		<p>
+			Each "screen" in a module (individual slide with it's own background, audio/video, etc.) is considered a separate Screen object in the framework. The Screen class
+			allows various functionality such as visually displaying the given screen (through loadScreen()), and holding data specific to the screen such as background image,
+			media file, a list of popup objects, etc. The global ModuleData object (explained above) holds an ordered list of Screen objects, with each one corresponding 
+			to a different screen in the module.
+		</p>
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- The Code: Classes -->
+	<div class="topic">
+		<a name="classes"></a>
+		<h3>The Code: Classes</h3>
+		<p>
+			Each JavaScript class definition sits in a separate .js file, each named in respect to the class within. Each file contains a description that may 
+			occasionally explain the class/file in more detail. So if the description below doesn't work for you, please check the file!
+			<br>
+			I make an attempt to explain the following classes in order of usage/importance.
+			<dl>
+			<dt>ModuleData</dt>
+				<dd>- a short explanation of this class is available in the <a href="#codeOverview">The Code: Overview</a> topic section </dd>
+				<dd>- created as a singleton in main.js </dd>
+				<dd>- holds a list of Screen objects as well as functionality to access them</dd>
+				<dd>- holds any other global data for the module</dd>
+			<dt>Screen</dt>
+				<dd>- a short explanation of this class is available in the <a href="#codeOverview">The Code: Overview</a> topic section </dd>
+				<dd>- acts as the parent class for popups in the framework</dd>
+				<dd>- holds data/functionality specific to one screen in the module</dd>
+				<dd>- this includes member MediaPlayer and Animator objects for the screen</dd>
+				<dd>- a list of these objects (one for each screen in the module) is held in the global ModuleData object</dd>
+			<dt>GlossaryScreen</dt>
+				<dd>- child of the Screen class</dd>
+				<dd>- a version of a PopupScreen, but specifically used to display the glossary screen (or popup)</dd>
+			<dt>PopupScreen</dt>
+				<dd>- child of the Screen class</dd>
+				<dd>- does everything a Screen does, but overlays on top of previously loaded screens</dd>
+			<dt>FlashScreen</dt>
+				<dd>- child of the PopupScreen class</dd>
+				<dd>- standard popup, but with the ability to "flip" the popup over, like a flashcard</dd>
+			<dt>ReturnScreen</dt>
+				<dd>- child of the PopupScreen class</dd>
+				<dd>- this popup will appear when the module is first loaded, prompts the user if they wish to load previous module data</dd>
+			<dt>Animator</dt>
+				<dd>- lives within a Screen object, each instance only controls the animations for one Screen object</dd>
+				<dd>- controls all animations on one screen</dd>
+			<dt>Button</dt>
+				<dd>- controls one instance of a button on one screen</dd>
+				<dd>- each Screen, or PopupScreen, object holds a list of Button objects (if any exist on the given screen)</dd>
+			<dt>MediaPlayer</dt>
+				<dd>- parent class for both the Audio and Video classes</dd>
+				<dd>- lives within a Screen object, each instance only controls the media for one Screen object</dd>
+				<dd>- contains all functionality associated with playing audio/video files</dd>
+				<dd>- this includes playing, pausing, resetting (etc.) of the media file, as well as the manipulation of the UI associated with the media (the scrubber)</dd>
+			<dt>Audio</dt>
+				<dd>- child class of the MediaPlayer</dd>
+				<dd>- contains functionality specific to the playing of Audio files</dd>
+			<dt>Video</dt>
+				<dd>- child class of the MediaPlayer</dd>
+				<dd>- contains functionality specific to the playing of Video files</dd>
+			<dt>Cookie</dt>
+				<dd>- created as a singleton in main.js</dd>
+				<dd>- controls all data persistence issues in the module (saving screen number, loading screen number, etc.)</dd>
+			<dt>Navigator</dt>
+				<dd>- created as a singleton in main.js</dd>
+				<dd>- responsible for relaying navigation requests from the user</dd>
+			<dt>DOM</dt>
+				<dd>- DOM, short for Document Object Model (in respect to the HTML DOM)</dd>
+				<dd>- holds any static references to DOM elements in the View portion of the framework</dd>
+				<dd>- acts as the "glue" between the static (elements not created through code) DOM elements in the module's View and the Controller</dd>
+			<dt>Menu</dt>
+				<dd>- parent class to all menus in the framework</dd>
+				<dd>- all common functionality, etc. for menus exist in here</dd>
+				<dd>- holds a list of MenuItem objects for the given menu</dd>
+			<dt>MainMenu</dt>
+				<dd>- child of the Menu class</dd>
+				<dd>- functionality, etc. for specific to the main menu exist in here</dd>
+			<dt>ResourcesMenu</dt>
+				<dd>- child of the Menu class</dd>
+				<dd>- functionality, etc. for specific to the resources menu exist in here</dd>
+			<dt>MenuItem</dt>
+				<dd>- an instance of a single menu item</dd>
+				<dd>- can be thought of as an individual "button" for a menu</dd>
+				<dd>- contains data for the background image of the item as well as constructs the action to be taken when this MenuItem is clicked</dd>
+			</dl>
+		</p>
+		<a href="#top">Back to Top</a>
+	</div>
+
+	
+	<!-- How To: Screens -->
+	<div class="topic">
+		<a name="howToScreens"></a>
+		<h3>How To: Screens</h3>
+		<p>
+			Adding a screen to the module is simple. Open the screens.xml file (under media/xml). This file contains all data specific to the screens in the web modules.
+			Below is an example screens.xml file, and below that an explanation:
+		</p>
+		
+		<xmp>
+		<screenList>
+			<screen>
+				<name>M1L1S00</name>
+				<title>Welcome</title>
+				<mediaName></mediaName>
+			</screen>
+		</screenList>
+		</xmp>
+		
+		<p>
+			The example screens.xml code above contains only one screen. In other words, attempting to navigate forward or backward in a module using the above XML 
+			would do nothing. The name of the screen, M1L1S00, is contained in the &ltname&gt tags. The title of the screen, 'Welcome', will display at the top of the 
+			screen. The &ltmediaName&gt tag, in this case empty, contains the name of an audio or video file for the screen to play (ex: 'M1L1S00.mp3'). The same example XML
+			with an audio file can be seen below:
+		</p>
+		
+		<xmp>
+		<screenList>
+			<screen>
+				<name>M1L1S00</name>
+				<title>Welcome</title>
+				<mediaName>M1L1S00.mp3</mediaName>
+			</screen>
+		</screenList>
+		</xmp>
+		
+		<p>
+			Now that the data for the screen is setup, we need to create this screens content folder which will contain various files needed to display the screen. 
+			Continuing with the above example, the new content folder will be located under media/screens and be called M1L1S00. Notice that the new folder in the 
+			screens directory (M1L1S00) is identical to the &ltname&gt tag in the screens.xml file above. This is so the Controller (or JavaScript code) can parse the 
+			screens.xml file can locate our new screen's content. The content folder should contain an HTML file (in this case called M1L1S00.html), and a background image
+			for the screen (called M1L1S00.png). Other additions can be made to this folder to extend this screen's functionality, all of which will be explained in later topics.
+		</p>
+		
+		<p>
+			Special Screen Types
+		</p>
+		
+		
+		
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- How To: Buttons -->
+	<div class="topic">
+		<a name="howToButtons"></a>
+		<h3> How To: Buttons </h3>
+		<p>
+			Buttons are written purely in HTML (along with in-line CSS); there is no JavaScript or XML required. The button's HTML is added to the screen, or popup screen's,
+			content folder HTML file. As an example, let's add a button to screen M1L1S00, which when clicked will open a popup on the screen called "pop1". 
+			We would first open the HTML file located under media/screens/M1L1S00/M1L1S00.html. Next, add a line to this file similar to the example HTML/CSS below:
+		</p>
+		
+		<xmp>
+		<div class="button" data-button=' "open":"pop1" ' style="position:absolute; top:602px; left:364px; width:247px; height:54px;"></div>
+		</xmp>
+		
+		<p>
+			The data-button attribute is where all actions (and information regarding those actions) are placed. The format is fairly identical to JSON; each action (such as
+			"open") is in quotes, followed by a colon, followed by data about the action in quotes. In this case, when the button is clicked, the button will do one action: open
+			the popup named "pop1". The "style" attribute of the above div will normally need to be customized to fit the buttons position. The 'button' class is not required, 
+			but is an easy way to change the CSS for all buttons uniformly. Multiple actions can be strung together by separating 
+			the actions with commas (again, similar to JSON). Here's an example of a button that will both close a popup named "pop1" and then open another popup named "pop2":
+		</p>
+		
+		<xmp>
+		<div class="button" data-button=' "close":"pop1", "open":"pop2" ' style="position:absolute; top:602px; left:364px; width:247px; height:54px;"></div>
+		</xmp>
+		
+		<p>
+		All currently usable actions are described below.
+			<dl>
+			<dt>Button actions (used in the 'data-button' attribute):</dt>
+				<dd>- "open":"&ltnameOfPopup&gt" - opens the popup given in &ltnameOfPopup&gt</dd>
+				<dd>- "close":"&ltnameOfPopup&gt" - closes the popup given in &ltnameOfPopup&gt</dd>
+				<dd>- "flip":"&ltnameOfPopup&gt" - tells the button to "flip" the popup over</dd>
+				<dd>- "toggleAudio":"toggleAudio" - this button will toggle the current screen's audio/video element</dd>
+				<dd>- "checkBox":"checkBox" - the button will be used as a selectable "checkBox" in a screen containing a multiple choice assessment</dd>
+				<dd>- "submit":"submit" - the button will be used as a submit button in a screen containing an assessment</dd>
+			</dl>
+		</p>
+		
+		<p>
+			NOTE: while first creating buttons, it is often helpful to set the DEBUG_BUTTON_OPACITY variable (located in the config.js file) to true. This will give the buttons
+			a slightly transparent coloring for debugging purposes. 
+		</p>
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- How To: Popups -->
+	<div class="topic">
+		<a name="howToPopups"></a>
+		<h3> How To: Popups </h3>
+		<p>
+			A popup in this framework can be simply thought of as another screen, but instead of filling the content area of the module, overlays existing screens.
+			This means that popups are not only created in a very similar way to normal screens, but they have the potential for a lot of the same functionality (audio/video,
+			animations, etc.). The following screens.xml file example will create one screen with one popup:
+		</p>
+		
+		<xmp>
+		<screenList>
+			<screen>
+				<name>M1L1S00</name>
+				<title>Welcome</title>
+				
+				<popup>
+					<name>pop1</name>
+					<mediaName></mediaName>
+				</popup>
+			</screen>
+		</screenList>
+		</xmp>
+		
+		<p>
+			Again, we use the simple M1L1S00 example from above, however in this case we add another tag <i>inside</i> the &ltscreen&gt tag, &ltpopup&gt.
+			If you notice, the children inside the &ltpopup&gt tag look a lot like the original screen XML. This is because popups are treated in a very similar way
+			to standard screens, and because of this can use a lot of the same XML data tags.
+		</p>
+		<p>
+			Creating the popup's content folder is also similar to adding a screen's content folder (explained in <a href="#howToScreens">How To: Screens</a>).
+			In this case, we will create a new folder under media/screens/M1L1S00 called pop1. Again, we name the folder according to the name in the screens.xml file
+			in the &ltname&gt tag. In this folder we can add the same HTML/png and name them like we did in the <a href="#howToScreens">How To: Screens</a> topic section,
+			except naming them pop1.html and pop1.png to match the popup's name.
+		</p>
+		
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- How To: Animations -->
+	<div class="topic">
+		<a name="howToAnimations"></a>
+		<h3> How To: Animations </h3>
+		<p>
+			Adding animations to a screen requires the creation of one xml file, and the addition of the images to animate to the given screen's content folder 
+			(media/screens/SCREEN_NAME). Explained in more detail, lets say we want to add a couple animated images to the screen M1L1S00. First we must create a new XML file
+			under media/screens/M1L1S00 called animations.xml. The framework will automatically look for this file and use the XML contained within to animate the screen.
+			Below is the content of this example animations.xml file, and below that an explanation:
+		</p>
+		
+		<xmp>
+		<animation>
+			<anim>
+				<src>M1L1S00-01.png</src>
+				<time>0</time>
+			</anim>
+			<anim>
+				<src>M1L1S00-02.png</src>
+				<time>2</time>
+			</anim>
+		</animation>
+		</xmp>
+		
+		<p>
+			In the example animations.xml file above, we see several tags. The &ltanim&gt tag denotes a new animation for the screen. In this example, there are going to be two
+			animations on screen M1L1S00. Inside the &ltanim&gt tag, the &ltsrc&gt tag is used to denote the name of the image to animate. These images will sit in the folder
+			media/screens/M1L1S00, or in the same directory as the animations.xml file. The &lttime&gt tag must always contain an integer number and is used to denote when the 
+			animation should appear, in seconds. In this example, the M1L1S00-01.png image will be visible from the start as its &lttime&gt tag is set to zero and the 
+			M1L1S00-02.png image will appear after the MediaPlayer plays for 2 seconds.
+		</p>
+		<p>
+			If we wanted to add an "end time", or a denote a time when the image should disappear, to the 2nd animation in the above example, you would simply use the following XML
+			in the 2nd anim's place:
+		</p>
+		
+		<xmp>
+		<anim>
+			<src>M1L1S00-02.png</src>
+			<time>2</time>
+			<end>4</end>
+		</anim>
+		</xmp>
+		<p>
+			In this case, the &ltend&gt tag is telling the above animated image to disappear after the audio has played for 4 seconds.
+		</p>
+		<p>
+			The &ltelement&gt tag allows named HTML elements on the current screen to have timed animations applied to them. By adding a
+			'data-animId' tag to any HTML element, the given element can be displayed/hidden based on the media's timing. The following animation.xml
+			example shows how to make a button with the tag 'data-animId="btn1"' appear after the media has played for 2 seconds:
+		</p>
+		
+		<xmp>
+		<anim>
+			<element>btn1</element>
+			<time>2</time>
+		</anim>
+		</xmp>
+		
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- How To: Assessments -->
+	<div class="topic">
+		<a name="howToAssessments"></a>
+		<h3> How To: Assessments </h3>
+		<p>
+			To add an assessment to the module, there are a few data files that must be altered. The first is the screens.xml data file. Add an assessment
+			to any screen by adding the &ltassessment&gt tag within the corresponding &ltscreen&gt node, as in the following example:
+		</p>
+		<xmp>
+		<screenList>
+			<screen>
+				<name>M1L5S02</name>
+				<title>Question 1</title>
+				<mediaName></mediaName>
+		
+				<assessment>
+					<type>dragAndDrop</type>
+				</assessment>
+			</screen>
+		</screenList>
+		</xmp>
+		
+		<p>
+			The &ltassessment&gt tag can contain the following tags:
+			<dl>
+			<dt>&lttype&gt - denotes the assessment's general type:</dt>
+				<dd>- 'multiple': this assessment is of type 'multiple choice'</dd>
+				<dd>- 'dragAndDrop': ... type 'drag and drop' </dd>
+			</dl>
+		</p>
+		
+		<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- How To: Assessments: Custom Result Screens -->
+	<div class="topic">
+		<a name="howToAssessmentsResult"></a>
+		<h3> How To: Assessments : Custom Result Screens </h3>
+		
+		<p>
+			Adding custom result screens (popup screen after getting an assessment correct/incorrect) is easy. In the HTML file for the assessment screen,
+			simply add a line of HTML such as the following example (can be anywhere in the file):
+		</p>
+	
+		<xmp>
+		<img id="incorrect2" style="display:none;" src="media/screens/M1L5S01/incorrect2.png">
+		</xmp>
+	
+		<p>
+			The above HTML will replace the result screen's image for this assessment when the user gets the answer wrong twice. The id denotes which result
+			to replace (can be "correct", "incorrect1", or "incorrect2").
+		</p>
+	
+	<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- How To: Assessments: Multiple Choice -->
+	<div class="topic">
+		<a name="howToAssessmentsMultiple"></a>
+		<h3> How To: Assessments : Multiple Choice </h3>
+		
+		<p>
+			The following example HTML/CSS is how to add a button to a multiple choice assessment:
+		</p>
+	
+		<xmp>
+		<div id='a' class='button checkBox' style='position:absolute; top:231px; left:106px; width:24px; height:24px;'></div>
+		</xmp>
+		
+		<p>
+			The id denotes the answer's "name" (to be referenced in the answers.xml file as an answer). The class must be of type "button checkBox". 
+			The CSS can be customized.
+		</p>
+		
+		<p>
+			To give the assessment an answer, answers.xml requires some XML similar to the following example:
+		</p>
+	
+		<xmp>
+		<M1L5S01>
+			<answer>a</answer>
+		</M1L5S01>
+		</xmp>
+		
+		<p>
+			The above XML would make the answer for the multiple choice assessment on screen M1L5S01, "a". This answer must correspond to the id of the check box button.
+		</p>
+	
+	<a href="#top">Back to Top</a>
+	</div>
+	
+	
+	<!-- How To: Assessments: Drag and Drop -->
+	<div class="topic">
+		<a name="howToAssessmentsDragAndDrop"></a>
+		<h3> How To: Assessments : Drag and Drop</h3>
+		
+		<p>
+			The following example HTML/CSS is how to add a draggable item to a drag and drop assessment:
+		</p>
+	
+		<xmp>
+		<div id="1" class="draggable" style="position:absolute; top:398px; left:46px; width:831px; height:63px;">
+			<img src="media/screens/M1L5S02/M1L5S02-01.png" />
+		</div>
+		</xmp>
+		
+		<p>
+			The id denotes the draggable object's "name" (to be referenced in the answers.xml file). The &ltimg&gt tag is the background image of the 
+			draggable element. The framework will make this element draggable due to the div's class, 'draggable'.
+		</p>
+		
+		<p>
+			The following example HTML/CSS is how to add a "dropPos", or position for the draggable element to be dropped on:
+		</p>
+	
+		<xmp>
+		<div id="1" class="dropPos" style="position:absolute; z-index:-1; top:182px; left:146px; width:831px; height:63px;"></div>
+		</xmp>
+		
+		<p>
+			The id denote's the drop position's "name" (to be referenced in the answers.xml file). The element's class, 'dropPos', will be picked up by 
+			the framework automatically and denote this location on the page as a drop position for draggable elements.
+		</p>
+	
+		<p>
+			To give the assessment answers, answers.xml requires some XML similar to the following example:
+		</p>
+	
+		<xmp>
+		<M1L5S02>
+			<answer>
+				<drag>drag1</drag>
+				<drop>drop1</drop>
+			</answer>
+			
+			<answer>
+				<drag>drag2</drag>
+				<drop>drop2</drop>
+			</answer>
+		</M1L5S02>
+		</xmp>
+		
+		<p>
+			The above XML creates a series of answers for the drag and drop assessment on screen M1L5S02. Within each &ltanswer&gt tag, two XML tags 
+			(&ltdrag&gt and &ltdrop&gt) make an association between a draggable item and a drop position. In this case, the screen has two draggable items,
+			with id's drag1 and drag2, and two drop positions, with id's drop1 and drop2. The correct location for drag1 is drop1 and the correct location
+			for drag2 is drop2.
+		</p>
+		
+		<p>
+			Multi-answer drag and drops are simple to implement. Just add more than one set of &ltdrop&gt tags to each answer in the xml.
+			IMPORTANT: one thing to remember when creating draggable items with multiple answers is that the first &ltdrop&gt tag for each
+			answer will act as that draggable items "default" answer. So when the answers are incorrect and being automatically placed in
+			their correct places, this first &ltdrop&gt tag is the location it will be placed.
+		</p>
+	<a href="#top">Back to Top</a>
+	</div>
+</div>
+
+</body>
+</html>

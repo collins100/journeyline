@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'NeutraText';
+    src: url('../media/global/fonts/NeutraTextTF-Book.otf');
+    font-weight: book;
+    font-style: book;
+}
+#popupgloss{
+	background:url(../media/global/images/gloss-01.png);
+	background-size: 1024px 768px;
+	width:1024px;
+	height:768px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#glossary{
+	position:absolute;
+	width:800px;
+	height:529px;
+	left: 120px;
+	top: 164px;
+}
+
+#glossTermHolder{
+	position:absolute;
+	overflow-y: scroll;
+	height:415px;
+	width:386px;
+	left:0px;
+	top: 122px;
+}
+
+#glossTerm {
+	height:22px;
+	width:362px;
+}
+#glossTerm p{
+	font-family: 'NeutraText';
+	font-style:book;
+	font-size:21px;
+	padding-left:36px;
+	padding-bottom: 5px;
+	color:#fff;
+	background:url(../media/global/images/glossBG.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+#glossTermChild { 
+	width: 362px;
+ }
+#glossTermChild p {	
+	font-family: 'NeutraText';
+	font-weight:book;
+	font-size:21px;
+	padding-left:54px;
+	padding-bottom: 5px;
+	color:#fff;
+	background-image: url(../media/global/images/glossBG.png); 	background-repeat: no-repeat;
+	background-position: bottom;
+}
+#glossTermChild p.on {
+	background: rgba(255, 255, 255, 0.2);
+	background-image: url(../media/global/images/glossBG.png); 	background-repeat: no-repeat;
+	background-position: bottom;
+	width:310px;
+}
+#glossAudio { 
+	position:absolute; 
+	top:-60px; 
+	left:684px; 
+	width:60px; 
+	height:60px; 
+}
+#TermTitle {
+	font-family: 'NeutraText';
+ 	font-style:book;
+	font-size:36px;
+  	line-height: 32px;
+	position:absolute;
+	width:300px;
+	top:28px;
+	left:420px;
+	color:#fff;
+}
+#TermTitleDef{
+	font-family: 'NeutraText';
+	font-style:book;
+	font-size:24px;
+	line-height: 150%;
+	position:absolute;
+	top:128px;
+	left:420px;
+	width:300px;
+	color:#fff;
+}
+
+#exitGloss { 
+	position:absolute; 
+	top:636px; 
+	left:514px; 
+	width:392px; 
+	height:62px; 
+}
+/**** scrollbar *****/
+
+::-webkit-scrollbar,
+   scrollbar, 
+   -ms-scrollbar
+   -moz-scrollbar { 
+   display: hidden;
+/*   width: 17px;
+	height:325px;
+	top: 156px;
+	position:relative;*/
+   }
+
+::-webkit-scrollbar-track-piece:vertical, 
+   scrollbar-track-piece:vertical, 
+   -ms-scrollbar-track-piece:vertical { 
+   }
+
+::-webkit-scrollbar-thumb:vertical , 
+   scrollbar-thumb:vertical , 
+   -ms-scrollbar-thumb:vertical {  
+/*   background:url(../media/global/images/btn_slider.png) no-repeat 0 0; 
+   background-size: 22px 67px;
+   margin-left: 2px;
+   cursor: pointer;
+   z-index: 99;*/   
+   }
+
+::-webkit-scrollbar-corner, 
+   scrollbar-corner, 
+   -ms-scrollbar-corner { }
+
+::-webkit-scrollbar-button, scrollbar-button { }
+::-webkit-scrollbar-track:increment, scrollbar-track:increment { 
+/*    height: 24px;
+	width: 24px;
+	color: #f00; */
+}
+
